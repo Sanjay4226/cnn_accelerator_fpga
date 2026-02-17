@@ -2,7 +2,7 @@
 
 #define IMG_SIZE 32
 #define K 3
-
+//kernel top file
 typedef ap_int<16> data_t;
 
 void cnn_top(data_t input[IMG_SIZE][IMG_SIZE],
