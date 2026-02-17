@@ -1,0 +1,5 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="10" filename="top.cpp" linenumber="2" name="c_assign" contextFuncName="top" moduleName="top" rtlName="c" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\hls"><\/item>
+<\/annotationInfo>
+</annotationInfo>
