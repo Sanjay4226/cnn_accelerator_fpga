@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/FPGA/test_fpga/test_fpga.srcs/constrs_1/new/top.xdc rfile:../../../test_fpga.srcs/constrs_1/new/top.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 10 [get_ports clk]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 10 [get_ports clk]

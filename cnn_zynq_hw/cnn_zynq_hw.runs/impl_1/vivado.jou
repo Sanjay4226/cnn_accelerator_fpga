@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Jan  7 17:01:59 2026
+# Process ID: 9428
+# Current directory: C:/FPGA/cnn_zynq_hw/cnn_zynq_hw.runs/impl_1
+# Command line: vivado.exe -log cnn_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source cnn_top.tcl -notrace
+# Log file: C:/FPGA/cnn_zynq_hw/cnn_zynq_hw.runs/impl_1/cnn_top.vdi
+# Journal file: C:/FPGA/cnn_zynq_hw/cnn_zynq_hw.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source cnn_top.tcl -notrace

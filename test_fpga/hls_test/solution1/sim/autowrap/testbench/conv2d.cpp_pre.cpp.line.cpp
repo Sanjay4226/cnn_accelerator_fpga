@@ -1,0 +1,17 @@
+#pragma line 1 "C:/FPGA/test_fpga/conv2d.cpp"
+#pragma line 1 "<built-in>"
+#pragma line 1 "<command-line>"
+#pragma line 1 "C:/FPGA/test_fpga/conv2d.cpp"
+void conv2d(int in[32][32], int kernel[3][3], int out[30][30]) {
+    for(int i=0;i<30;i++){
+        for(int j=0;j<30;j++){
+            int sum=0;
+            for(int ki=0;ki<3;ki++){
+                for(int kj=0;kj<3;kj++){
+                    sum += in[i+ki][j+kj] * kernel[ki][kj];
+                }
+            }
+            out[i][j] = sum;
+        }
+    }
+}

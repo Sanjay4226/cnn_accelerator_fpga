@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/FPGA/test_fpga/hls_test/solution1/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/FPGA/test_fpga/hls_test/solution1/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="hls_test" solutionName="solution1" date="2026-01-28T23:54:02.719+0530"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'conv2d/out' to 'conv2d/out_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_test" solutionName="solution1" date="2026-01-28T23:49:21.131+0530" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'conv2d/in' to 'conv2d/in_r' to avoid the conflict with HDL keywords or other object names." projectName="hls_test" solutionName="solution1" date="2026-01-28T23:49:21.112+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

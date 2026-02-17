@@ -1,0 +1,5 @@
+cnn_top_mul_mul_1bkb
+cnn_top_mac_muladcud
+cnn_top_control_s_axi
+cnn_top_gmem_m_axi
+cnn_top

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/FPGA/Cnn_Hls/solution1/export.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/FPGA/Cnn_Hls/solution1/export.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:46:05.728+0530"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('p_1_1', cnn_top.cpp:24) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp11', cnn_top.cpp:24) (3.02 ns)&#xD;&#xA;&#x9;'add' operation ('tmp10', cnn_top.cpp:24) (0 ns)&#xD;&#xA;&#x9;'add' operation ('sum_V_2_2', cnn_top.cpp:24) (3.9 ns)" projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.759+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (10.283ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.743+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.719+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.702+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.688+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.671+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.651+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.635+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'gmem' (cnn_top.cpp:24) and bus request on port 'gmem' (cnn_top.cpp:24)." projectName="Cnn_Hls" solutionName="solution1" date="2026-01-09T14:45:42.616+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,234 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Jan 28 21:06:02 2026
+# Process ID: 10828
+# Current directory: C:/FPGA/cnn_accelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16912 C:\FPGA\cnn_accelerator\cnn_accelerator.xpr
+# Log file: C:/FPGA/cnn_accelerator/vivado.log
+# Journal file: C:/FPGA/cnn_accelerator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/FPGA/cnn_accelerator/cnn_accelerator.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/Cnn_Hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 872.051 ; gain = 135.656
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property top design_1_wrapper [current_fileset]
+add_files -norecurse -scan_for_includes
+reorder_files -auto -disable_unused
+launch_runs synth_1 -jobs 6
+Wrote  : <C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Jan 28 21:10:34 2026] Launched synth_1...
+Run output will be captured here: C:/FPGA/cnn_accelerator/cnn_accelerator.runs/synth_1/runme.log
+file mkdir C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/new
+close [ open C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/new/topcnn.v w ]
+add_files C:/FPGA/cnn_accelerator/cnn_accelerator.srcs/sources_1/new/topcnn.v
+add_files -norecurse -scan_for_includes C:/FPGA/Cnn_Hls/solution1/impl/ip/hdl/verilog/cnn_top.v
+import_files -norecurse C:/FPGA/Cnn_Hls/solution1/impl/ip/hdl/verilog/cnn_top.v
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Wed Jan 28 21:19:00 2026] Launched synth_1...
+Run output will be captured here: C:/FPGA/cnn_accelerator/cnn_accelerator.runs/synth_1/runme.log
+close_project
+create_project test_fpga C:/FPGA/test_fpga -part xc7z020clg484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2018.2/data/ip'.
+file mkdir C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new
+close [ open C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v w ]
+add_files C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v
+update_compile_order -fileset sources_1
+file mkdir C:/FPGA/test_fpga/test_fpga.srcs/constrs_1
+file mkdir C:/FPGA/test_fpga/test_fpga.srcs/constrs_1/new
+close [ open C:/FPGA/test_fpga/test_fpga.srcs/constrs_1/new/top.xdc w ]
+add_files -fileset constrs_1 C:/FPGA/test_fpga/test_fpga.srcs/constrs_1/new/top.xdc
+launch_runs synth_1 -jobs 6
+[Wed Jan 28 21:26:45 2026] Launched synth_1...
+Run output will be captured here: C:/FPGA/test_fpga/test_fpga.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Wed Jan 28 21:28:36 2026] Launched impl_1...
+Run output will be captured here: C:/FPGA/test_fpga/test_fpga.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Wed Jan 28 21:30:41 2026] Launched impl_1...
+Run output will be captured here: C:/FPGA/test_fpga/test_fpga.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Wed Jan 28 21:34:49 2026] Launched synth_1...
+Run output will be captured here: C:/FPGA/test_fpga/test_fpga.runs/synth_1/runme.log
+[Wed Jan 28 21:34:49 2026] Launched impl_1...
+Run output will be captured here: C:/FPGA/test_fpga/test_fpga.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1820.738 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1820.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 1899.246 ; gain = 862.055
+report_power -name {power_1}
+Command: report_power -name power_1
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1930.809 ; gain = 0.000
+report_ssn -name ssn_1
+INFO: [Designutils 20-1021] SSN analysis is only relevant to output and bidirectional ports.  Input ports are not used in the analysis, and are not shown in the Noise report.
+    1. clk
+
+INFO: [Coretcl 2-1142] Start SSN Analysis...
+report_operating_conditions -grade -return_string
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+report_drc -name drc_1 -ruledecks {default}
+Command: report_drc -name drc_1 -ruledecks default
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc completed successfully
+report_methodology -name ultrafast_methodology_1 -checks {PDRC-204 PDRC-190 TIMING-43 TIMING-42 TIMING-41 TIMING-40 TIMING-39 TIMING-38 TIMING-37 TIMING-36 TIMING-35 TIMING-34 TIMING-33 TIMING-32 TIMING-31 TIMING-30 TIMING-29 TIMING-28 TIMING-27 TIMING-26 TIMING-25 TIMING-24 TIMING-23 TIMING-22 TIMING-21 TIMING-20 TIMING-19 TIMING-18 TIMING-17 TIMING-16 TIMING-15 TIMING-14 TIMING-13 TIMING-12 TIMING-11 TIMING-10 TIMING-9 TIMING-8 TIMING-7 TIMING-6 TIMING-5 TIMING-4 TIMING-3 TIMING-2 TIMING-1 XDCV-2 XDCV-1 XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-5 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-54 CLKC-53 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-18 CLKC-3 CLKC-2 CLKC-1 REQP-1959 LUTAR-1 HPDR-1 NTCN-1 CKLD-2 CKLD-1 DPIR-1 CKBF-1 SYNTH-14 SYNTH-13 SYNTH-12 SYNTH-11 SYNTH-10 SYNTH-9 SYNTH-16 SYNTH-15 SYNTH-6 SYNTH-5 SYNTH-4}
+Command: report_methodology -name ultrafast_methodology_1 -checks {PDRC-204 PDRC-190 TIMING-43 TIMING-42 TIMING-41 TIMING-40 TIMING-39 TIMING-38 TIMING-37 TIMING-36 TIMING-35 TIMING-34 TIMING-33 TIMING-32 TIMING-31 TIMING-30 TIMING-29 TIMING-28 TIMING-27 TIMING-26 TIMING-25 TIMING-24 TIMING-23 TIMING-22 TIMING-21 TIMING-20 TIMING-19 TIMING-18 TIMING-17 TIMING-16 TIMING-15 TIMING-14 TIMING-13 TIMING-12 TIMING-11 TIMING-10 TIMING-9 TIMING-8 TIMING-7 TIMING-6 TIMING-5 TIMING-4 TIMING-3 TIMING-2 TIMING-1 XDCV-2 XDCV-1 XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-5 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-54 CLKC-53 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-18 CLKC-3 CLKC-2 CLKC-1 REQP-1959 LUTAR-1 HPDR-1 NTCN-1 CKLD-2 CKLD-1 DPIR-1 CKBF-1 SYNTH-14 SYNTH-13 SYNTH-12 SYNTH-11 SYNTH-10 SYNTH-9 SYNTH-16 SYNTH-15 SYNTH-6 SYNTH-5 SYNTH-4}
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+report_methodology completed successfully
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+create_bd_design "design_1"
+Wrote  : <C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/design_1.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+WARNING: [Boardtcl 53-1] No current board_part set.
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+generate_target all [get_files  C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/design_1.bd]
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/processing_system7_0/M_AXI_GP0_ACLK
+
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_gpio_0/GPIO'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins /axi_gpio_0/GPIO'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+</axi_gpio_0/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41200000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_0
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_0 /axi_gpio_0/GPIO
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-3258] Validation failed for parameter 'PCW_FPGA0_PERIPHERAL_FREQMHZ' with value '100 MHz'. Invalid long/float value '100 MHz' specified for parameter 'PCW FPGA0 PERIPHERAL FREQMHZ(PCW_FPGA0_PERIPHERAL_FREQMHZ)' for BD Cell 'processing_system7_0'.
+
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50}] [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_GENERATE_SUMMARY {NONE}] [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100}] [get_bd_cells processing_system7_0]
+endgroup
+validate_bd_design
+make_wrapper -files [get_files C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files -norecurse C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v] -no_script -reset -force -quiet
+remove_files  C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v
+remove_files  C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v
+WARNING: [Vivado 12-818] No files matched 'C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v'
+file delete -force C:/FPGA/test_fpga/test_fpga.srcs/sources_1/new/top.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/FPGA/test_fpga/test_fpga.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Wed Jan 28 22:05:10 2026] Launched design_1_processing_system7_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/FPGA/test_fpga/test_fpga.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: C:/FPGA/test_fpga/test_fpga.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/FPGA/test_fpga/test_fpga.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/FPGA/test_fpga/test_fpga.runs/design_1_auto_pc_0_synth_1/runme.log
+synth_1: C:/FPGA/test_fpga/test_fpga.runs/synth_1/runme.log
+[Wed Jan 28 22:05:10 2026] Launched impl_1...
+Run output will be captured here: C:/FPGA/test_fpga/test_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2341.113 ; gain = 52.703
+file mkdir C:/FPGA/test_fpga/test_fpga.sdk
+file copy -force C:/FPGA/test_fpga/test_fpga.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/test_fpga/test_fpga.sdk/design_1_wrapper.hdf
+
+file copy -force C:/FPGA/test_fpga/test_fpga.runs/impl_1/design_1_wrapper.sysdef C:/FPGA/test_fpga/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/FPGA/test_fpga -hwspec C:/FPGA/test_fpga/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/FPGA/test_fpga -hwspec C:/FPGA/test_fpga/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 28 23:18:28 2026...

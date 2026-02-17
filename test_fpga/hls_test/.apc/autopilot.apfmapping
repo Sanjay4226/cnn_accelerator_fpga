@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv2d.cpp" path="C:\FPGA\test_fpga\conv2d.cpp"/>
+    <originFiles name="conv2d.cpp" path="C:\FPGA\test_fpga\conv2d.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_conv2d.cpp" path="C:\FPGA\test_fpga\tb_conv2d.cpp"/>
+    <originFiles name="tb_conv2d.cpp" path="C:\FPGA\test_fpga\tb_conv2d.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
